@@ -8,11 +8,11 @@
 #                                 #
 
 # Version : Alpha 1.0
-# This is an Alpha Test version, please report any bugs at ()
+# This is an Alpha Test version, please report any bugs at https://github.com/scar430/Cradle/issues
 
 # NOTE : Messages will be moved to another file in the future.
 
-# If you are looking to replace a certain Cradle module I suggest looking here : https://clients.mcprohosting.com/knowledgebase/22/recommended-minecraft-plugins.html
+# If you are looking to replace a Cradle module I suggest looking here : https://clients.mcprohosting.com/knowledgebase/22/recommended-minecraft-plugins.html
 
 # If you have a plugin that replaces the functionality of a certain module you can just set the module's 'enabled' variable to false
 
@@ -82,8 +82,7 @@ chat-green-text: "&a"
 ### +-------------------------+ ###
 ###################################
 
-# Cradle's Economy module is functional however it is very basic.
-# If you are looking for more complex eco functionality then a third-party eco plugin is recommended.
+# NOTE : Using the Cradle Economy module is not suggested as economy data will NOT permeate through restarts.
 
 # Enable or disable economy.
 eco-enabled: false
@@ -126,7 +125,7 @@ hard-respawn: true
 # RANDOM TELEPORT (rtp) #
 #########################
 
-# DO NOT use this module as it has no specific functionality and may break something.
+# NOTE : do NOT use this module as it has no specific functionality and may break something.
 
 # When a player first joins a server they will be randomly spawned in the rtp zone. 
 # Note: Overrides normal spawn.
@@ -145,7 +144,8 @@ rtp-hard-respawn-enabled: false
 ### +-------------------------+ ###
 ###################################
 
-# DO NOT use this module as it has no specific functionality and may break something.
+# NOTE : do NOT use this module as it has no specific functionality and may break something.
+
 # This module is still under heavy development. I suggest LuckPerms if you are looking for a permission plugin
 
 # Disable or enable module.
