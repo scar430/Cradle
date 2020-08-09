@@ -1,3 +1,7 @@
+*
+
+!/Cradle/src/*
+
 # Compiled class file
 *.class
 
