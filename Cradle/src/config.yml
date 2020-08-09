@@ -1,0 +1,152 @@
+#  ___  ___  ___  ___   _     ___ #
+# / __|| _ \/   \|   \ | |   | __|#
+#| (__ |   /| - || |) || |__ | _| #
+# \___||_|_\|_|_||___/ |____||___|#
+#                                 #
+#               BY                #
+#             scar430             #
+#                                 #
+
+# Version : Alpha 1.0
+# This is an Alpha Test version, please report any bugs at ()
+
+# NOTE : Messages will be moved to another file in the future.
+
+# If you are looking to replace a certain Cradle module I suggest looking here : https://clients.mcprohosting.com/knowledgebase/22/recommended-minecraft-plugins.html
+
+# If you have a plugin that replaces the functionality of a certain module you can just set the module's 'enabled' variable to false
+
+###################################
+### +-------------------------+ ###
+### |       CHAT MODULE       | ###
+### +-------------------------+ ###
+###################################
+
+# Disable or enable module.
+chat-enabled: true
+
+#Message sent on join.
+motd: "Welcome to the server!"
+
+# chat-player-format will act as a prefix to the message sent by a player.
+# e.g. example-prefix exampleName example-suffix : this is a message blah blah blah
+# Tags include : 
+# %PREFIX
+# %USERNAME - The literal username of the player, currently does not account for thinks like nicknames.
+# %DISPLAYNAME - (Currently unsupported) Accounts for things like nickname and usually preferred and suggested.
+# %SUFFIX
+chat-player-format: "%PREFIX%USERNAME%SUFFIX : "
+# Join message.
+chat-join-msg: "%USERNAME joined the game."
+# Quit message.
+chat-quit-msg: "%USERNAME has left the game."
+
+# The message that appears when /rules is run.
+chat-rules: "1. No spamming.\n2. No hacking\n3. If you're seeing this the owner is lazy."
+
+# The message that appears when /help is run.
+chat-help: "Punch trees to get wood."
+
+# PM tags:
+# %SENDER - User who sent the PM
+# %RECEIVED - User who received the PM
+
+# Prefix for pm's that were sent.
+chat-private-message-sent: "Me -> %RECEIVED : "
+
+#Prefix for pm's that were received.
+chat-private-message-received: "%SENDER -> Me : "
+
+
+
+# Prefix for Broadcast messages.
+chat-broadcast: "[&cBROADCAST&r] : "
+
+# Prefix for Alert messages.
+chat-alert: "[&cALERT&r] : "
+
+# Mention color, presented when a user @'s another user.
+# i.e. ExampleUser : Hey, @ExampleName how's it going?
+chat-tag-enable: true
+# Color-code for tags
+chat-tag: "&e"
+
+# Greent text feature
+chat-green-text-enable: true
+#Color code for green-text
+chat-green-text: "&a"
+
+###################################
+### +-------------------------+ ###
+### |      ECONOMY MODULE     | ###
+### +-------------------------+ ###
+###################################
+
+# Cradle's Economy module is functional however it is very basic.
+# If you are looking for more complex eco functionality then a third-party eco plugin is recommended.
+
+# Enable or disable economy.
+eco-enabled: false
+
+# Note that money is stored as a double.
+
+# Formatting will be supported on a later date. 
+# Symbol used to represent the currency.
+eco-currency-symbol: "BTC "
+
+# Message that prefixes what your balance is
+eco-currency-message: "Your balance is : &e"
+
+# Bank accounts are created with this initial amount.
+eco-initial-balance: "100.0"
+
+###################################
+### +-------------------------+ ###
+### |     TELEPORT MODULE     | ###
+### +-------------------------+ ###
+###################################
+
+# This module is still under heavy development.
+
+# Disable or enable module.
+tp-enabled: true
+
+#########
+# SPAWN #
+#########
+
+# Disable or enable all spawn functionality. This is basically disabling a sub-group of the Teleport Module
+# spawn-enabled will determine if Cradles spawning/respawning functionality is enabled.
+spawn-enabled: true
+
+# Force players to spawn at the servers set spawn, regardless if they have slept in a bed or not.
+hard-respawn: true
+
+#########################
+# RANDOM TELEPORT (rtp) #
+#########################
+
+# DO NOT use this module as it has no specific functionality and may break something.
+
+# When a player first joins a server they will be randomly spawned in the rtp zone. 
+# Note: Overrides normal spawn.
+rtp-spawn-enabled: false
+
+# On death, players will be randomly respawned in an rtp zone.
+# NOTE : This will override things like hard-respawn
+rtp-respawn-enabled: false
+
+# This will force the player to be respawned in the rtp zone whether they slept in a bed or not.
+rtp-hard-respawn-enabled: false
+
+###################################
+### +-------------------------+ ###
+### |   PERMISSIONS MODULE    | ###
+### +-------------------------+ ###
+###################################
+
+# DO NOT use this module as it has no specific functionality and may break something.
+# This module is still under heavy development. I suggest LuckPerms if you are looking for a permission plugin
+
+# Disable or enable module.
+permissions-enabled: false

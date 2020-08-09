@@ -1,0 +1,203 @@
+main: Cradle.Cradle
+name: Cradle
+version: 1.0
+description: This is a server manager to replace Essentials because I find Essentials really annoying.
+api-version: 1.15
+author: scar430
+prefix: Cradle
+softdepend: [Vault]
+
+# Yes, I copied these comments from the config, how did you know? <]:^)
+
+commands:
+
+###################################
+### +-------------------------+ ###
+### |       CHAT MODULE       | ###
+### +-------------------------+ ###
+###################################
+
+  help:
+    description: Send help message to players.
+    aliases:
+    - h
+    permission: cradle.chat.help
+    permission-message: You do not have permission!
+    usage: /<command>
+
+  rules:
+    description: Send a list of rules to the player.
+    aliases:
+    - r
+    permission: cradle.chat.rules
+    permission-message: You do not have permission!
+    usage: /<command>
+
+  pm:
+    description: User can send private message to another user.
+    aliases:
+    - m
+    permission: cradle.chat.pm
+    permission-message: You do not have permission!
+    usage: /<command> <player> <message>
+
+# ADMIN
+
+  broadcast:
+   description: Broadcast a message to all players on a server.
+   aliases:
+    - bc
+   permission: cradle.chat.admin.broadcast
+   permission-message: You do not have permission!
+   usage: /<command> <message>
+  
+  alert:
+    description: Send an alert to a specified player. This functions similar to a Broadcast except only targeted at one player.
+    aliases:
+    - al
+    permission: cradle.chat.admin.alert
+    permission-message: You do not have permission!
+    usage: /<command> <player> <message>
+
+###################################
+### +-------------------------+ ###
+### |      ECONOMY MODULE     | ###
+### +-------------------------+ ###
+###################################
+
+  balance:
+    description: Check how much money is in the users account.
+    aliases:
+    - bal
+    permission: cradle.eco.balance
+    permission-message: You do not have permission!
+    usage: /<command>
+
+  pay:
+    description: Give another player a specified amount of money.
+    permission: cradle.eco.pay
+    permission-message: You do not have permission!
+    usage: /<command> <player>
+
+# ADMIN
+
+  apay:
+    description: Put a specified amount of money into a player's account.
+    permission: cradle.eco.admin.pay
+    permission-message: You do not have permission!
+    usage: /<command>
+
+###################################
+### +-------------------------+ ###
+### |     TELEPORT MODULE     | ###
+### +-------------------------+ ###
+###################################
+
+  tp:
+    description: Request to teleport to a user.
+    permission: cradle.teleport.tp
+    permission-message: You do not have permission!
+    usage: /<command> <player>
+
+  tpaccept:
+    description: Accept a teleport request
+    aliases:
+    - tpa
+    permission: cradle.teleport.tp
+    permission-message: You do not have permission!
+    usage: /<command>
+
+  spawn:
+    description: Teleports a user to spawn
+    permission: cradle.teleport.spawn
+    permission-message: You do not have permission!
+    usage: /<command>
+
+# ADMIN
+
+  atp:
+    description: Teleport to a user without their consent or knowledge.
+    permission: cradle.teleport.admin.atp
+    permission-message: You do not have permission!
+    usage: /<command> <player>
+
+  setglobalspawn:
+    description: Set a spawn for the entire server.
+    alias:
+    - setglobal
+    - sgs
+    permission: cradle.teleport.admin.sgs
+    permission-message: You do not have permission!
+    usage: /<command>
+
+###################################
+### +-------------------------+ ###
+### |       PERMISSIONS       | ###
+### +-------------------------+ ###
+###################################
+
+permissions:
+
+###################################
+### +-------------------------+ ###
+### |       CHAT MODULE       | ###
+### +-------------------------+ ###
+###################################
+
+  cradle.chat.pm:
+   description: Let's user private message another player.
+
+  cradle.chat.help:
+    description: Let's user request helpful resources. Suggested for normal users.
+
+  cradle.chat.rules:
+    description: Let's user request a list of rules. Suggested for normal users.
+
+# ADMIN
+
+  cradle.chat.admin.broadcast:
+   description: Let's user broadcast a message to all player's on a server. Suggested only for Admins.
+   default: op
+
+  cradle.chat.admin.alert:
+   description: Let's user send a message to a specific player, similar to broadcast but for one person. Suggested only for admins.
+   default: op
+
+###################################
+### +-------------------------+ ###
+### |      ECONOMY MODULE     | ###
+### +-------------------------+ ###
+###################################
+
+  cradle.eco.balance:
+    description: Let's a user check the balance of their account. Suggested for normal members.
+
+  cradle.eco.pay:
+    description: Let's a user give another user a specified amount of money.
+
+# ADMIN
+
+  cradle.eco.admin.pay:
+    description: Puts a specified amount into a users account.
+
+###################################
+### +-------------------------+ ###
+### |     TELEPORT MODULE     | ###
+### +-------------------------+ ###
+###################################
+
+  cradle.teleport.tp:
+    description: Send a teleport request to another player.
+
+  cradle.teleport.spawn:
+    description: Send player to spawn
+
+# ADMIN
+
+  cradle.teleport.admin.atp:
+    description: Let's a user teleport to a user without their consent or knowledge. Suggested only for Admins.
+    default: op
+
+  cradle.teleport.admin.sgs:
+    description: Let's user set global spawn point
+    default: op

@@ -1,6 +1,9 @@
+# Ignore everything
 *
-
-!/Cradle/src/*
+# But descend into directories
+!*/
+# Recursively allow files under subtree
+!/Cradle/src/**
 
 # Compiled class file
 *.class
