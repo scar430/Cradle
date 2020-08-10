@@ -4,3 +4,5 @@
 !*/
 # Recursively allow files under subtree
 !/Cradle/src/**
+
+!*.md
