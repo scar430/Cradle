@@ -5,7 +5,7 @@ Currently Cradle is in the most early stages of development; expect lots of chan
 # Specifications
 - Cradle requires [Vault](https://dev.bukkit.org/projects/vault) to interface with other plugins. If you're wondering why things like prefixes aren't showing up, make sure [Vault](https://dev.bukkit.org/projects/vault) is installed.
 - Cradle is compatible with MineCraft versions 1.8 - 1.16, note that older versions require further testing.
-- Cradle requires Java 8 or higher is required, older versions may cause weird behavior.
+- Cradle requires Java 8 or higher, older versions may cause weird behavior.
 
 # Developer's Note
 - Using the Cradle Economy module is not suggested as economy data will NOT permeate through restarts.
